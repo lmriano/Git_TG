@@ -515,8 +515,8 @@ background: #74767D;
 
 .side-menu .active{
     display: block;
-    background: #28384E;
-    color: #B0B0B0;
+    background: #00AFB9;
+    color: #D9D9D9;
 }
 
 .side-menu i{
@@ -526,7 +526,7 @@ background: #74767D;
 }
 
 ul li:hover {
-    background-color: #28384E;
+    background-color: #00AFB9;
 }
 
 #menu-toggle:checked ~ .sidebar{
