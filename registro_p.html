@@ -114,18 +114,84 @@
             
             <div class="page-content">
             
-                <div class="analytics">
-
+                <div class="table-register">
+    
+                    <p>Registro de Datos Personales</p>
+                    <br><br>
                     
+                    <form>
 
+                        <div class="grid-container">
+                            <table>
+                                <tr>
+                                    <td>Primer nombre*</td>
+                                    <td><input type="text" name="primer-nombre" class="grid-item" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Segundo nombre</td>
+                                    <td><input type="text" name="segundo-nombre" class="grid-item"></td>
+                                </tr>
+                                <tr>
+                                    <td>Primer apellido*</td>
+                                    <td><input type="text" name="primer-apellido" class="grid-item" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Segundo apellido*</td>
+                                    <td><input type="text" name="segundo-apellido" class="grid-item" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo de documento*</td>
+                                    <td>
+                                        <select name="tipo-documento" class="grid-item" required>
+                                            <option value="CC">Cédula de Ciudadanía</option>
+                                            <option value="CE">Cédula de Extranjería</option>
+                                            <option value="TI">Tarjeta de Identidad</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Número de documento*</td>
+                                    <td><input type="text" name="numero-documento" class="grid-item" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Ciudad de expedición*</td>
+                                    <td><input type="text" name="ciudad-expedicion" class="grid-item" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Fecha de nacimiento*</td>
+                                    <td><input type="date" name="fecha-nacimiento" class="grid-item" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Teléfono 1*</td>
+                                    <td><input type="tel" name="telefono-1" class="grid-item" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Teléfono 2</td>
+                                    <td><input type="tel" name="telefono-2" class="grid-item"></td>
+                                </tr>
+                                <tr>
+                                    <td>Correo electrónico*</td>
+                                    <td><input type="email" name="email" class="grid-item" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Actividad física que realiza</td>
+                                    <td><input type="text" name="actividad-fisica" class="grid-item"></td>
+                                </tr>
+                                <tr>
+                                    <td>Frecuencia de actividad física</td>
+                                    <td><input type="text" name="frecuencia-actividad" class="grid-item"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" value="Guardar"></td>
+                                    <td><input type="reset" value="Limpiar"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                    </form>
                 </div>
-            
             </div>
-            
-
-
-        </main>
-        
+        </main> 
     </div>
 </body>
 </html>

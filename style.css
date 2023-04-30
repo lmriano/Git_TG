@@ -225,8 +225,6 @@ footer .logo{
     padding: 10px 10px 0;
 }
 
-
-/*Login*/
 /*Estilos login*/
 
 .log{
@@ -627,6 +625,9 @@ ul li:hover {
     font-weight: bold;
 }
 
+.user a span:hover{
+    color: #00AFB9;
+}
 
 main{
     min-height: calc(100vh-60px);
@@ -648,6 +649,8 @@ main{
     background-color: #f1f4f9;
     position: relative;
 }
+
+/*Estilos página inicio*/
 
 .analytics{
     display: grid;
@@ -695,9 +698,72 @@ main{
     right: 0;
 }
 
-.user a span:hover{
-    color: #6A6C70;
+/*Estilos registro paciente*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+th, td {
+    text-align: left;
+    padding: 8px 8px 0px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.grid-container form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.grid-container tr{
+    display: flex;
+    flex-direction: column;
+}
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.grid-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.grid-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 8px 4px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 8px 4px;
+    cursor: pointer;
+}
+
 @media (min-width: 830px){
 
     header .logo{
