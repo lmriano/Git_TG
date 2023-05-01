@@ -724,6 +724,7 @@ main{
 .botones-reg{
     display: flex;
     justify-content: center;
+    margin-top: 2em;
 }
 
 .botones-reg button{

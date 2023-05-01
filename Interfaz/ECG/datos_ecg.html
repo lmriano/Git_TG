@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Datos del paciente</title>
+</head>
+<body class="dash">
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <a href="index.html">
+                <img src="media/logo-dash.svg" alt="Logo-dash-2" style="height: 45px;">
+            </a>  
+        </div>
+        
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(media/1.png)"></div>
+                <h4>Nombre</h4>
+                <small>Especialista</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                        <a href="inicio.html" >
+                            <i class="fa-solid fa-house"></i>
+                            <small>Inicio</small>
+                         </a>
+                     </li>
+                    <li>
+                       <a href="registro_p.html">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <small>Registrar</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="consulta_p.html" >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <small>Consultar</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="proceso_ecg.html"  class="active">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <small>ECG</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="pacientes.html">
+                            <i class="fa-solid fa-user-group"></i>
+                            <small>Mis pacientes</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="#">
+                            <i class="fa-solid fa-bell"></i>
+                            <small>Notificaciones</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="#">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <small>Próximas citas</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <small>Configuración</small>
+                        </a>
+                     </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        
+        <header class="header-dash">
+            <div class="header-content">
+
+                <div class="label">
+                    <label for="menu-toggle">
+                        <i class="fa-solid fa-bars" style="color: #0a0a0a;"></i>
+                    </label>
+                </div>
+                
+                
+                <div class="header-menu">
+                                      
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(media/1.png)"></div>
+                        <a href="index.html">
+                            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #0a0a0a;"></i>
+                            <span>Salir</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="page-header">
+                <h1>ECG</h1>
+                <small>ECG/Datos</small>
+            </div>
+            <div class="page-content">
+                <div class="table-register">
+                    <p>Datos Personales</p>
+                    <br><br>
+                    <div>
+                        <form class="formulario">
+
+                            <div class="columna1">
+                                <div class="grupo-campo">
+                                    <div class="fila1">
+                                        <label for="primer-nombre">Primer nombre</label>
+                                        <input type="text" id="primer-nombre" name="primer-nombre" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna2">
+                                <div class="grupo-campo">
+                                    <div class="fila1">
+                                        <label for="primer-apellido">Primer apellido</label>
+                                        <input type="text" id="primer-apellido" name="primer-apellido" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna2">
+                                <div class="grupo-campo">
+                                    <div class="fila2">
+                                        <label for="numero-documento">Número de documento</label>
+                                        <input type="text" id="numero-documento" name="numero-documento" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna4">
+                                <div class="grupo-campo">
+                                    <div class="fila2">
+                                        <label for="fecha-proceso">Fecha de consulta</label>
+                                        <input type="date" id="fecha-proceso" name="fecha-proceso" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna1">
+                                <div class="grupo-campo">
+                                    <div class="fila3">
+                                        <label for="telefono1">Teléfono 1</label>
+                                        <input type="tel" id="telefono1" name="telefono1" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna2">
+                                <div class="grupo-campo">
+                                    <div class="fila3">
+                                        <label for="email">Correo electrónico</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna3">
+                                <div class="grupo-campo">
+                                    <div class="fila3">
+                                        <label for="actividad-fisica">Actividad física que realiza</label>
+                                        <input type="text" id="actividad" name="actividad" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna4">
+                                <div class="grupo-campo">
+                                    <div class="fila4">
+                                        <label for="frecuencia-fisica">Frecuencia de actividad física</label>
+                                        <input type="text" id="frecuencia" name="frecuencia" required>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                        </form>
+
+                    <div class="botones-reg">
+                        <a href="proceso_ecg.html"><button class="bt-reg-1">Regresar</button></a>
+                        <button class="bt-reg-2">Siguiente</button>
+                    </div>
+                      
+                </div>
+            </div>
+        </main> 
+    </div>
+</body>
+</html>
