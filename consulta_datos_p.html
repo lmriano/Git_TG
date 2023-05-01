@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Registrar paciente</title>
+    <title>Datos del paciente</title>
 </head>
 <body class="dash">
     <input type="checkbox" id="menu-toggle">
@@ -33,13 +33,13 @@
                          </a>
                      </li>
                     <li>
-                       <a href="registro_p.html" class="active">
+                       <a href="registro_p.html">
                             <i class="fa-solid fa-user-plus"></i>
                             <small>Registrar</small>
                         </a>
                     </li>
                     <li>
-                       <a href="consulta_p.html">
+                       <a href="consulta_p.html"  class="active">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <small>Consultar</small>
                         </a>
@@ -106,12 +106,12 @@
         
         <main>
             <div class="page-header">
-                <h1>Registrar</h1>
-                <small>Registrar/</small>
+                <h1>Consultar</h1>
+                <small>Consultar/Datos</small>
             </div>
             <div class="page-content">
                 <div class="table-register">
-                    <p>Registro de Datos Personales</p>
+                    <p>Datos Personales</p>
                     <br><br>
                     <div>
                         <form class="formulario">
@@ -232,8 +232,8 @@
                         </form>
 
                     <div class="botones-reg">
-                        <button class="bt-reg-1">Limpiar</button>
-                        <button>Guardar</button>
+                        <a href="consulta_p.html"><button class="bt-reg-1">Regresar</button></a>
+                        <button class="bt-reg-2">Modificar</button>
                     </div>
                       
                 </div>

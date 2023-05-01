@@ -713,11 +713,11 @@ main{
     margin-bottom: 0.5rem;
 }
 
-.grupo-campo input, .grupo-campo select {
+.grupo-campo input, .grupo-campo select, .consulta-u input{
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     border: 1px solid #ccc;
 }
 
@@ -732,11 +732,22 @@ main{
 }
 
 .botones-reg .bt-reg-1{
-    background-color:  #444;
+    background-color: #74767D;
 }
 
 .botones-reg .bt-reg-1:hover{
-    background-color: #74767D;
+    background-color: #444;
+}
+
+/*Estilos consulta paciente*/
+
+.search img{
+    visibility: hidden;
+    display: none;
+}
+
+.consulta-u button, .consulta-u input{
+   margin-top: .8em;
 }
 
 @media (min-width: 830px){
@@ -952,6 +963,8 @@ main{
         margin-right: 30px;
     }
 
+    /*Estilos registro paciente*/
+
     .formulario {
         display: flex;
         flex-wrap: wrap;
@@ -961,6 +974,28 @@ main{
     .grupo-campo {
         margin: 0.5rem;
         width: 20rem;
+    }
+
+    /*Estilos consulta paciente*/
+    
+    .search img{
+        visibility: visible;
+        display: block;
+        margin-top: 5em;
+    }
+
+    .search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .consulta-u button{
+        margin-left: 0;
+    }
+
+    .busqueda{
+        margin-left: 5em;
     }
           
 }
