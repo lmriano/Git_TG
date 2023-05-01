@@ -8,7 +8,6 @@
 
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
 }
 
 h1{font-size: 3,5em;}
@@ -650,6 +649,10 @@ main{
     position: relative;
 }
 
+.dash{
+    background-color: #f1f4f9;
+}
+
 /*Estilos página inicio*/
 
 .analytics{
@@ -699,69 +702,41 @@ main{
 }
 
 /*Estilos registro paciente*/
-table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-th, td {
-    text-align: left;
-    padding: 8px 8px 0px;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-.grid-container form {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.grid-container tr{
-    display: flex;
-    flex-direction: column;
+.grupo-campo {
+    margin-bottom: 1rem;
 }
   
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    margin-bottom: 20px;
-}
-  
-.grid-item {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-  
-.grid-container label {
+.grupo-campo label {
     display: block;
-    margin-bottom: 5px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    text-decoration: none;
-    margin: 8px 4px;
-    cursor: pointer;
+.grupo-campo input, .grupo-campo select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
 }
 
-input[type="reset"] {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    text-decoration: none;
-    margin: 8px 4px;
-    cursor: pointer;
+.botones-reg{
+    display: flex;
+    justify-content: center;
+}
+
+.botones-reg button{
+    margin: 0 10px; 
+    border: 1px solid black;
+}
+
+.botones-reg .bt-reg-1{
+    background-color:  #444;
+}
+
+.botones-reg .bt-reg-1:hover{
+    background-color: #74767D;
 }
 
 @media (min-width: 830px){
@@ -885,8 +860,6 @@ input[type="reset"] {
 
     }
 
-
-
     .inicio h4{
         margin: 0;
         margin-top: 20px;
@@ -928,7 +901,6 @@ input[type="reset"] {
         margin-left: 10px;
         color: white;
         text-decoration: none;
-
     }
 
     .agrupar a:hover {
@@ -979,6 +951,18 @@ input[type="reset"] {
         padding: 10px 10px 10px 10px; 
         margin-right: 30px;
     }
+
+    .formulario {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .grupo-campo {
+        margin: 0.5rem;
+        width: 20rem;
+    }
+          
 }
 
 @media (min-width:992px){

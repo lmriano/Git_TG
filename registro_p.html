@@ -104,91 +104,138 @@
             </div>
         </header>
         
-        
         <main>
-            
             <div class="page-header">
                 <h1>Registrar</h1>
                 <small>Registrar/</small>
             </div>
-            
             <div class="page-content">
-            
                 <div class="table-register">
-    
                     <p>Registro de Datos Personales</p>
                     <br><br>
-                    
-                    <form>
+                    <div>
+                        <form class="formulario">
 
-                        <div class="grid-container">
-                            <table>
-                                <tr>
-                                    <td>Primer nombre*</td>
-                                    <td><input type="text" name="primer-nombre" class="grid-item" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Segundo nombre</td>
-                                    <td><input type="text" name="segundo-nombre" class="grid-item"></td>
-                                </tr>
-                                <tr>
-                                    <td>Primer apellido*</td>
-                                    <td><input type="text" name="primer-apellido" class="grid-item" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Segundo apellido*</td>
-                                    <td><input type="text" name="segundo-apellido" class="grid-item" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Tipo de documento*</td>
-                                    <td>
-                                        <select name="tipo-documento" class="grid-item" required>
+                            <div class="columna1">
+                                <div class="grupo-campo">
+                                    <div class="fila1">
+                                        <label for="primer-nombre">Primer nombre*</label>
+                                        <input type="text" id="primer-nombre" name="primer-nombre" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna2">
+                                <div class="grupo-campo">
+                                    <div class="fila1">
+                                        <label for="segundo-nombre">Segundo nombre</label>
+                                        <input type="text" id="segundo-nombre" name="segundo-nombre">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna3">
+                                <div class="grupo-campo">
+                                    <div class="fila1">
+                                        <label for="primer-apellido">Primer apellido*</label>
+                                        <input type="text" id="primer-apellido" name="primer-apellido" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna4">
+                                <div class="grupo-campo">
+                                    <div class="fila1">
+                                        <label for="segundo-apellido">Segundo apellido*</label>
+                                        <input type="text" id="segundo-apellido" name="segundo-apellido" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna1">
+                                <div class="grupo-campo">
+                                    <div class="fila2">
+                                        <label for="tipo-documento">Tipo de documento*</label>
+                                        <select id="tipo-documento" name="tipo-documento" required>
                                             <option value="CC">Cédula de Ciudadanía</option>
                                             <option value="CE">Cédula de Extranjería</option>
                                             <option value="TI">Tarjeta de Identidad</option>
                                         </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Número de documento*</td>
-                                    <td><input type="text" name="numero-documento" class="grid-item" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Ciudad de expedición*</td>
-                                    <td><input type="text" name="ciudad-expedicion" class="grid-item" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Fecha de nacimiento*</td>
-                                    <td><input type="date" name="fecha-nacimiento" class="grid-item" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Teléfono 1*</td>
-                                    <td><input type="tel" name="telefono-1" class="grid-item" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Teléfono 2</td>
-                                    <td><input type="tel" name="telefono-2" class="grid-item"></td>
-                                </tr>
-                                <tr>
-                                    <td>Correo electrónico*</td>
-                                    <td><input type="email" name="email" class="grid-item" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Actividad física que realiza</td>
-                                    <td><input type="text" name="actividad-fisica" class="grid-item"></td>
-                                </tr>
-                                <tr>
-                                    <td>Frecuencia de actividad física</td>
-                                    <td><input type="text" name="frecuencia-actividad" class="grid-item"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="submit" value="Guardar"></td>
-                                    <td><input type="reset" value="Limpiar"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna2">
+                                <div class="grupo-campo">
+                                    <div class="fila2">
+                                        <label for="numero-documento">Número de documento*</label>
+                                        <input type="text" id="numero-documento" name="numero-documento" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna3">
+                                <div class="grupo-campo">
+                                    <div class="fila2">
+                                        <label for="ciudad-expedicion">Ciudad de expedición*</label>
+                                        <input type="text" id="ciudad-expedicion" name="ciudad-expedicion" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna4">
+                                <div class="grupo-campo">
+                                    <div class="fila2">
+                                        <label for="fecha-nacimiento">Fecha de nacimiento*</label>
+                                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna1">
+                                <div class="grupo-campo">
+                                    <div class="fila3">
+                                        <label for="telefono1">Teléfono 1*</label>
+                                        <input type="tel" id="telefono1" name="telefono1" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna2">
+                                <div class="grupo-campo">
+                                    <div class="fila3">
+                                        <label for="telefono2">Teléfono 2</label>
+                                        <input type="tel" id="telefono2" name="telefono2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna3">
+                                <div class="grupo-campo">
+                                    <div class="fila3">
+                                        <label for="email">Correo electrónico*</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna4">
+                                <div class="grupo-campo">
+                                    <div class="fila3">
+                                        <label for="actividad-fisica">Actividad física que realiza</label>
+                                        <input type="text" id="actividad" name="actividad" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna1">
+                                <div class="grupo-campo">
+                                    <div class="fila4">
+                                        <label for="frecuencia-fisica">Frecuencia de actividad física</label>
+                                        <input type="text" id="frecuencia" name="frecuencia" required>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                                
+                            </div>
+                        </form>
+
+                    <div class="botones-reg">
+                        <button class="bt-reg-1">Limpiar</button>
+                        <button>Guardar</button>
+                    </div>
+                      
                 </div>
             </div>
         </main> 
