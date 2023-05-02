@@ -755,6 +755,120 @@ main{
    margin-top: .8em;
 }
 
+.regresar i{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.regresar{
+    display: flex;
+    align-items: center;
+}
+
+/*Estilos ECG ayuda*/
+.video-container{
+    display: flex;
+    justify-content: center;
+}
+
+.video-container video {
+    max-width: 100%;
+    height: 20em;
+}
+
+/*Estilos captura*/
+.modulo, .modulo-doc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modulo h4,.modulo-doc h4{
+    color: #C1121F;
+    text-align: center;
+}
+
+.canvas-container {
+    border: 1px solid black; 
+    width: 90%; 
+    height: 400px; 
+    margin-top: 2rem;
+}
+
+.botones-reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 1rem;
+}
+
+.botones-reg button{
+    margin-bottom: 1rem;
+}
+
+/*Estilos datos de captura*/
+
+.capturas{
+    font-size: 1em;
+    border-radius: 0.5rem;
+    border:1px solid #6A6C70;
+    background-color: #A7C957;
+    width: 120px;
+    text-align: center;
+    padding: 0.3rem;
+    margin: 5px;
+}
+
+.capturas-tomadas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.t-captura{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.img-captura img{
+    width: 8em;
+}
+
+/*Estilos documento*/
+
+.modulo-doc .canvas-container {
+    border: 1px solid black; 
+    width: 80%; 
+    height: 400px; 
+    margin-top: 2rem;
+}
+
+.botones-doc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 1rem;
+}
+
+.botones-doc button{
+    margin-top: 1rem;
+    border: 1px solid black;
+}
+
+.img-doc img{
+    visibility: hidden;
+    display: none;
+}
+
+
 @media (min-width: 830px){
 
     header .logo{
@@ -1002,12 +1116,79 @@ main{
     .busqueda{
         margin-left: 5em;
     }
-          
+
+    /*Estilos ECG ayuda*/
+
+    .video-container video {
+        max-width: 100%;
+        height: 25em;
+    }
+
+    /*Estilos captura*/
+
+    .canvas-container {
+        width: 70%; 
+    }
+
+    .botones-reg{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5px;
+        margin-right: 1rem;
+    }
+
+    /*Estilos datos de captura*/
+    .capturas-tomadas{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .img-captura img{
+        width: 14em;
+    }
+
+    /*Estilos documento*/
+
+    .t-doc,.bot-img{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .modulo-doc{
+        order:1;
+    }
+
+    .img-doc img{
+        visibility: visible;
+        display: block;
+        width: 20em;
+        margin-right: 1em;
+    }
+
+    .bot-img{
+        flex-direction: column;
+    }
+
+
+
 }
 
 @media (min-width:992px){
     #inicio{
         background-position-x: calc(100vw-800px);
+    }
+
+    .canvas-container {
+        width: 50%; 
+    }
+}
+
+@media (min-width:500px){
+    .modulo-doc .canvas-container {
+        width: 400px; 
+        height: 550px; 
     }
 }
 
