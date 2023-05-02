@@ -32,6 +32,11 @@ button{
 
 button:hover{
     background-color: #C1121F;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 .container{
@@ -921,7 +926,18 @@ tbody tr td{
     transition: .2s ease-in-out;
 }
 
+.fecha{
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+}
 
+.fecha input{
+    width: 150px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
 
 @media (min-width: 830px){
 
@@ -1262,3 +1278,5 @@ tbody tr td{
         min-width: 12rem;
     }
 }
+
+
