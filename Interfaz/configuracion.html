@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Configuración</title>
+
 </head>
 <body class="dash">
     <input type="checkbox" id="menu-toggle">
@@ -112,11 +113,24 @@
             </div>
             <div class="page-content">
                 <div class="table-register">
-                    <p>Registro de Datos Personales</p>
+                    <p>Registro de datos personales especialista</p>
                     <br><br>
+
+                    <form class="perfil">
+                        <div class="foto-perfil">
+                            <div class="foto">
+                                <div class="profile-img bg-img" style="background-image: url(../../media/1.png)"></div>
+                            </div>
+                            <div class="cargar-foto">
+                                <label for="foto">Foto de perfil:</label>
+                                <input type="file" id="foto" name="foto">
+                                <button type="button" onclick="borrarSeleccion()">Borrar</button>
+                            </div>
+                        </div>
+                    </form>
                     
                     <form class="formulario">
-
+                        
                         <div class="columna1">
                             <div class="grupo-campo">
                                 <div class="fila1">
@@ -223,52 +237,24 @@
                                 </div>
                             </div>
                         </div>
+                    </form>
 
-                        <div class="columna1">
-                            <div class="grupo-campo">
-                                <div class="fila4">
-                                    <label for="peso">Peso*</label>
-                                    <input type="text" id="peso" name="peso" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="columna2">
-                            <div class="grupo-campo">
-                                <div class="fila4">
-                                    <label for="Estatura">Estatura*</label>
-                                    <input type="text" id="estatura" name="estatura" required>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="columna3">
-                            <div class="grupo-campo">
-                                <div class="fila4">
-                                    <label for="actividad-fisica">Actividad física que realiza</label>
-                                    <input type="text" id="actividad" name="actividad">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="columna4">
-                            <div class="grupo-campo">
-                                <div class="fila4">
-                                    <label for="frecuencia-fisica">Frecuencia de actividad física</label>
-                                    <input type="text" id="frecuencia" name="frecuencia">
-                                </div>
-                            </div>
-                        </div>
-                    </form>        
+                    <div class="eliminar">
+                        <a href="#"><p>Eliminar cuenta</p></a>
+                    </div>
 
                     <div class="botones-reg">
-                        <a href="registro_p.html"><button class="bt-reg-1">Limpiar</button></a>
                         <button>Guardar</button>
                     </div>
-                      
                 </div>
             </div>
         </main> 
     </div>
+
+    <script>
+        function borrarSeleccion() {
+          document.getElementById("foto").value = "";
+        }
+    </script>
 </body>
 </html>

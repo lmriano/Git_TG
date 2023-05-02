@@ -33,10 +33,6 @@ button{
 button:hover{
     background-color: #C1121F;
     transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
 }
 
 .container{
@@ -545,6 +541,10 @@ ul li:hover {
     width: calc(100%-68px);
 }
 
+#menu-toggle:checked ~ .main-content main{
+    width: 100%;
+}
+
 #menu-toggle:checked ~ .header{
     margin-left: 68px;
     width: calc(100%-68px);
@@ -939,6 +939,48 @@ tbody tr td{
     border: 1px solid #ccc;
 }
 
+/* Estilos configuración*/
+
+.eliminar a p{
+    color:#C1121F;
+    font-size: small;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.eliminar a p:hover{
+    color: #00AFB9;
+    font-size: small;
+}
+
+.foto-perfil{
+    display: flex;
+    margin-right: 2em;
+}
+
+.foto{
+    margin-right: 2em;
+}
+.cargar-foto{
+    display: flex;
+    flex-direction: column;
+}
+.cargar-foto button{
+    width: 60px;
+    font-size: 1em;
+    font-weight: 1;
+    padding: 2px;
+    border-radius: 5px;
+    color: black;
+    background-color: #B0B0B0;
+    border: 1px solid #74767D;
+}
+
+.cargar-foto button,.cargar-foto input{
+     margin:1px;
+}
+
+
 @media (min-width: 830px){
 
     header .logo{
@@ -1278,5 +1320,6 @@ tbody tr td{
         min-width: 12rem;
     }
 }
+
 
 
