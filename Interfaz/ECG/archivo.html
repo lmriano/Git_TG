@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Pacientes</title>
+    <title>Datos del paciente</title>
 </head>
 <body class="dash">
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="side-header">
-            <a href="../index.html">
-                <img src="../media/logo-dash.svg" alt="Logo-dash-2" style="height: 45px;">
+            <a href="../../index.html">
+                <img src="../../media/logo-dash.svg" alt="Logo-dash-2" style="height: 45px;">
             </a>  
         </div>
         
         <div class="side-content">
             <div class="profile">
-                <div class="profile-img bg-img" style="background-image: url(../media/1.png)"></div>
+                <div class="profile-img bg-img" style="background-image: url(../../media/1.png)"></div>
                 <h4>Nombre</h4>
                 <small>Especialista</small>
             </div>
@@ -27,31 +27,31 @@
             <div class="side-menu">
                 <ul>
                     <li>
-                        <a href="inicio.html" >
+                        <a href="../inicio.html" >
                             <i class="fa-solid fa-house"></i>
                             <small>Inicio</small>
                          </a>
                      </li>
                     <li>
-                       <a href="Registrar/registro_p.html">
+                       <a href="../Registrar/registro_p.html">
                             <i class="fa-solid fa-user-plus"></i>
                             <small>Registrar</small>
                         </a>
                     </li>
                     <li>
-                       <a href="Consulta/consulta_p.html">
+                       <a href="../Consulta/consulta_p.html" >
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <small>Consultar</small>
                         </a>
                     </li>
                     <li>
-                       <a href="ECG/proceso_ecg.html">
+                       <a href="../ECG/proceso_ecg.html"  class="active">
                             <i class="fa-solid fa-heart-pulse"></i>
                             <small>ECG</small>
                         </a>
                     </li>
                     <li>
-                       <a href="pacientes.html" class="active">
+                       <a href="../pacientes.html">
                             <i class="fa-solid fa-user-group"></i>
                             <small>Mis pacientes</small>
                         </a>
@@ -90,12 +90,11 @@
                     </label>
                 </div>
                 
-                
                 <div class="header-menu">
                                       
                     <div class="user">
-                        <div class="bg-img" style="background-image: url(../media/1.png)"></div>
-                        <a href="../index.html">
+                        <div class="bg-img" style="background-image: url(../../media/1.png)"></div>
+                        <a href="../../index.html">
                             <i class="fa-solid fa-arrow-right-from-bracket" style="color: #0a0a0a;"></i>
                             <span>Salir</span>
                         </a>
@@ -105,16 +104,15 @@
         </header>
         
         <main>
-            
             <div class="page-header">
-                <h1>Pacientes</h1>
-                <small>Pacientes/</small>
+                <h1>ECG</h1>
+                <small>ECG/Datos/Archivo</small>
             </div>
-            
             <div class="page-content">
-
+                
                 <div class="regresar">
-                    <p>Tabla de pacientes</p>
+                    <a href="datos_ecg.html"><i class="fa-solid fa-arrow-left" style="color: #0a0a0a"></i></a>
+                    <p>Diagnostico de pacientes</p>
                 </div>
 
                 <section class="table__body">
@@ -122,60 +120,58 @@
                         <thead>
                             <tr>
                                 <th> Check </th>
+                                <th> Fecha </th>
+                                <th> No Captura </th>
                                 <th> Nombre </th>
-                                <th> Apellido </th>
-                                <th> Edad </th>
-                                <th> ECG </th>
+                                <th> Documento </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><input type="checkbox"></td>
+                                <td> 04/02/2023 </td>
+                                <td> ECG_001 </td>
                                 <td> Laura </td>
                                 <td> Riaño </td>
-                                <td> 17 </td>
-                                <td> Si </td>
                             </tr>
                             <tr>
                                 <td><input type="checkbox"></td>
-                                <td> Laura </td>
-                                <td> Ruiz </td>
-                                <td> 27 </td>
-                                <td> No </td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"></td>
+                                <td> 01/02/2023 </td>
+                                <td> ECG_002 </td>
                                 <td> Milena </td>
+                                <td> Ruiz </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td> 04/04/2023 </td>
+                                <td> ECG_003 </td>
+                                <td> Laura </td>
                                 <td> Riaño </td>
-                                <td> 14 </td>
-                                <td> No </td>
                             </tr>
                             
                                 <td><input type="checkbox"></td>
+                                <td> 01/05/2023 </td>
+                                <td> ECG_004 </td>
                                 <td> Milena </td>
                                 <td> Ruiz </td>
-                                <td> 30 </td>
-                                <td> Si </td>
                             </tr>
                             <tr>
                                 <td><input type="checkbox"></td>
+                                <td> 04/03/2023 </td>
+                                <td> ECG_005 </td>
                                 <td> Laura </td>
-                                <td> Riaño </td>
-                                <td> 22 </td>
-                                <td> Si </td>
+                                <td> Ruiz </td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <div class="botones-reg">
-                    <a href="Consulta/consulta_datos_p.html"><button>Modificar</button></a>
-                    <a href="#"><button>Eliminar</button></a>
-                    <a href="ECG/archivo.html"><button>Detalles</button></a>
+                    <a href="#"><button>Abrir</button></a>
                 </div>
 
             </div>
-        </main>
+        </main> 
     </div>
 </body>
 </html>

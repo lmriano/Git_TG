@@ -868,6 +868,60 @@ main{
     display: none;
 }
 
+/*Estilos de pacientes*/
+
+.table__body {
+    width: 95%;
+    max-height: calc(69% - 1.6rem);
+    background-color: #fffb;
+    margin: 3rem auto;
+    overflow: auto;
+    overflow: overlay;
+    border-radius: .8rem;
+}
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+table {
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #ced4da;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e2fdff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #EEEFF4;
+}
+
+tbody tr.hide{
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr td{
+    transition: .2s ease-in-out;
+}
+
+
 
 @media (min-width: 830px){
 
@@ -1200,5 +1254,11 @@ main{
 
     .doc img{
         display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 12rem;
     }
 }
