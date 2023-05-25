@@ -25,43 +25,48 @@
             <div class="reg">
                 <h3>Regístrate</h3>
             </div>
-
-            <div class="cont">
-                <h5>Nombre completo</h5>
-                <div class="agrupar">
-                    <img src="../media/add.svg" alt="usuario" style="height: 2rem; background-color: gray;">
-                    <input class="in" type="text" placeholder="-"/>
-                </div>
-            </div>
             
-            <div class="cont">
-                <h5>Email</h5>
-                <div class="agrupar">
-                    <img src="../media/lock.svg" alt="contraseña" style="height: 2rem; background-color: gray">
-                    <input class="in" type="e_mail" placeholder="-"/>
+            <form id="formulario" method="POST">
+                <div class="cont">
+                    <h5>Nombre completo</h5>
+                    <div class="agrupar">
+                        <img src="../media/add.svg" alt="usuario" style="height: 2rem; background-color: gray;">
+                        <input class="in" type="text" placeholder="-"/>
+                    </div>
                 </div>
-            </div>
-
-            <div class="cont">
-                <h5>Contraseña</h5>
-                <div class="agrupar">
-                    <img src="../media/mail.svg" alt="contraseña" style="height: 2rem; background-color: gray">
-                    <input class="in" type="password" placeholder="-"/>
+                
+                <div class="cont">
+                    <h5>Email</h5>
+                    <div class="agrupar">
+                        <img src="../media/lock.svg" alt="contraseña" style="height: 2rem; background-color: gray">
+                        <input class="in" type="e_mail" placeholder="-"/>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="registro">
-                <button onclick="window.location.href='#'">REGISTRAR</button>
-            </div>
-
-            <div class="item">
-                <h5>¿Ya tienes cuenta?</h5>
-                <a href="login.html" class="olvidar">Ingresa</a>
-            </div>
-
-            <div class="item">
-                <a href="../index.html" class="volver">Regresar al inicio</a>
-            </div>
+    
+                <div class="cont">
+                    <h5>Contraseña</h5>
+                    <div class="agrupar">
+                        <img src="../media/mail.svg" alt="contraseña" style="height: 2rem; background-color: gray">
+                        <input class="in" type="password" placeholder="-"/>
+                    </div>
+                </div>
+                
+                <div class="enviar">
+                    <a href="login.html">
+                        <button type="button">Registrate</button>
+                    </a>
+                </div>
+    
+                <div class="item">
+                    <h5>¿Ya tienes cuenta?</h5>
+                    <a href="login.html" class="olvidar">Ingresa</a>
+                </div>
+    
+                <div class="item">
+                    <a href="../index.html" class="volver">Regresar al inicio</a>
+                </div>
+            </form>
+        
         </div>
         
     </div>

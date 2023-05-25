@@ -331,6 +331,11 @@ footer .logo{
     width: 12rem;
 }
 
+.enviar, .item{
+    display: flex;
+    justify-content: center;
+}
+
 .enviar{
     margin-top: 1.5em;
 }

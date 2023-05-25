@@ -28,30 +28,35 @@
                 <h3>Bienvenido</h3>
             </div>
 
-            <div class="cont">
-                <h5>Nombre de usuario</h5>
-                <div class="agrupar">
-                    <img src="../media/user.svg" alt="usuario" style="height: 2rem; background-color: gray;">
-                    <input class="in" type="text" placeholder="-"/>
+            <form id="formulario" method="POST">
+                
+                <div class="cont">
+                    <h5>Nombre de usuario</h5>
+                    <div class="agrupar">
+                        <img src="../media/user.svg" alt="usuario" style="height: 2rem; background-color: gray;">
+                        <input class="in" type="text" placeholder="-"/>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="cont">
-                <h5>Contraseña</h5>
-                <div class="agrupar">
-                    <img src="../media/lock.svg" alt="contraseña" style="height: 2rem; background-color: gray">
-                    <input class="in" type="password" placeholder="-"/>
+                
+                <div class="cont">
+                    <h5>Contraseña</h5>
+                    <div class="agrupar">
+                        <img src="../media/lock.svg" alt="contraseña" style="height: 2rem; background-color: gray">
+                        <input class="in" type="password" placeholder="-"/>
+                    </div>
                 </div>
-            </div>
+                
+                <div class="item">
+                        <a href="olvido_contraseña.html" class="olvidar">¿Olvidaste tu contraseña?</a>
+                </div>
+    
+                <div class="enviar">
+                    <a href="../Interfaz/configuracion.html">
+                        <button type="button">Ingresar</button>
+                    </a>
+                </div>
+            </form>
             
-            <div class="item">
-                    <a href="olvido_contraseña.html" class="olvidar">¿Olvidaste tu contraseña?</a>
-            </div>
-
-            <div class="enviar">
-                <a href="../Interfaz/inicio.html"><button>INGRESAR</button></a>
-            </div>
-
             <div class="item">
                 <h5>¿No tienes cuenta?</h5>
                 <a href="register.html" class="olvidar">Registrate</a>
@@ -60,6 +65,7 @@
             <div class="item">
                 <a href="../index.html" class="volver">Regresar al inicio</a>
             </div>
+
         </div>
         
     </div>
