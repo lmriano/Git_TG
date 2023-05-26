@@ -26,12 +26,12 @@
                 <h3>Regístrate</h3>
             </div>
             
-            <form id="formulario" method="POST">
+            <form id="form_register" method="POST">
                 <div class="cont">
-                    <h5>Nombre completo</h5>
+                    <h5>Nombre usuario</h5>
                     <div class="agrupar">
                         <img src="../media/add.svg" alt="usuario" style="height: 2rem; background-color: gray;">
-                        <input class="in" type="text" placeholder="-"/>
+                        <input class="in" type="text" id="txt_usuario" name="txt_usuario" placeholder="-" required=""/>
                     </div>
                 </div>
                 
@@ -39,7 +39,7 @@
                     <h5>Email</h5>
                     <div class="agrupar">
                         <img src="../media/lock.svg" alt="contraseña" style="height: 2rem; background-color: gray">
-                        <input class="in" type="e_mail" placeholder="-"/>
+                        <input class="in" type="e_mail" id="txt_email" name="txt_email"placeholder="-" required=""/>
                     </div>
                 </div>
     
@@ -47,13 +47,13 @@
                     <h5>Contraseña</h5>
                     <div class="agrupar">
                         <img src="../media/mail.svg" alt="contraseña" style="height: 2rem; background-color: gray">
-                        <input class="in" type="password" placeholder="-"/>
+                        <input class="in" type="password" id="txt_pass" name="txt_pass"placeholder="-" required=""/>
                     </div>
                 </div>
                 
                 <div class="enviar">
                     <a href="login.html">
-                        <button type="button">Registrate</button>
+                        <button type="submit">Registrate</button>
                     </a>
                 </div>
     
@@ -63,12 +63,14 @@
                 </div>
     
                 <div class="item">
-                    <a href="../index.html" class="volver">Regresar al inicio</a>
+                    <a href="index.html" class="volver">Regresar al inicio</a>
                 </div>
             </form>
         
         </div>
         
     </div>
+
+    <script src="../js/registro.js"></script>
 </body>
 </html>
