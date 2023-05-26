@@ -2,7 +2,16 @@
 
 $nombre = isset($_POST['txt_usuario']) ? $_POST['txt_usuario'] : '';
 $email = isset($_POST['txt_email']) ? $_POST['txt_email'] : '';
+
+$email = isset($_POST['txt_email']) ? $_POST['txt_email'] : '';
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $error = "El correo electrónico no es válido";
+}
+
+
 $contraseña = isset($_POST['txt_pass']) ? $_POST['txt_pass'] : '';
+$contraseña = hash('sha512',$contraseña);
 
 try {
     $conexion = new PDO("mysql:host=localhost;port=3306;dbname=sportholter", "root", "");
