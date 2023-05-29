@@ -13,10 +13,11 @@ document.getElementById('form_login').addEventListener('submit', function(e) {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data === 'true') {
                     window.location.href = '../Interfaz/configuracion.html';
                 } else {
+                    alert('Acceso incorrecto!, Verifica las credenciales');
+                    window.location.href = 'login.html';
                     console.log(data);
                 }
             });
