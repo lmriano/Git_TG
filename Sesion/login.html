@@ -28,13 +28,13 @@
                 <h3>Bienvenido</h3>
             </div>
 
-            <form id="formulario" method="POST">
+            <form id="form_login" method="POST">
                 
                 <div class="cont">
                     <h5>Correo</h5>
                     <div class="agrupar">
                         <img src="../media/lock.svg" alt="contraseña" style="height: 2rem; background-color: gray">
-                        <input class="in" type="e_mail" id="txt_email" name="txt_email"placeholder="-" required=""/>
+                        <input class="in" type="e_mail" id="txt_email" name="txt_email" placeholder="-" required=""/>
                     </div>
                 </div>
                 
@@ -42,7 +42,7 @@
                     <h5>Contraseña</h5>
                     <div class="agrupar">
                         <img src="../media/lock.svg" alt="contraseña" style="height: 2rem; background-color: gray">
-                        <input class="in" type="password" placeholder="-"/>
+                        <input class="in" type="password" id="txt_pass" name="txt_pass" placeholder="-"/>
                     </div>
                 </div>
                 
@@ -51,8 +51,8 @@
                 </div>
     
                 <div class="enviar">
-                    <a href="../Interfaz/configuracion.html">
-                        <button type="button">Ingresar</button>
+                    <a>
+                        <button type="submit">Ingresar</button>
                     </a>
                 </div>
             </form>
@@ -69,5 +69,6 @@
         </div>
         
     </div>
+    <script src="../js/login.js"></script>
 </body>
 </html>
