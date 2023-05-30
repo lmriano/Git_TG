@@ -1,18 +1,17 @@
 
 function getData(url) {
-    return fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Error en la solicitud: ' + response.status);
-        }
-        return response.json();
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
-  
-  // Función para mostrar los datos en la consola y actualizar la página
+  return fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error en la solicitud: ' + response.status);
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
   function displayData(data) {
     console.log('Datos leídos:');
     console.log(data);
@@ -28,19 +27,6 @@ function getData(url) {
 
     const sapellidoEspecialista = document.getElementById('segundo-apellido');
     sapellidoEspecialista.value = data.segundo_apellido;
-
-    const tipoDocumento = document.getElementById('tipo-documento');
-    const tipoDocumentoValue = data.tipo_documento;
-
-    for (let i = 0; i < tipoDocumento.options.length; i++) {
-    const option = tipoDocumento.options[i];
-
-        if (option.value === tipoDocumentoValue) {
-            // Establecemos la opción como seleccionada
-            option.selected = true;
-            break;
-        }
-    }
 
     const nDocumento = document.getElementById('numero-documento');
     nDocumento.value = data.num_documento;
@@ -58,7 +44,6 @@ function getData(url) {
     telefono2.value = data.telefono2;
 }
   
-  // Llamada a la función para obtener los datos del servidor
 getData('../php/readEspecialista.php')
     .then(data => {
       displayData(data);

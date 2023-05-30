@@ -1,7 +1,6 @@
 document.getElementById('form_especialista').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Obtener los datos del formulario
     let formulario = {
         'primer-nombre': document.getElementById('primer-nombre').value,
         'segundo-nombre': document.getElementById('segundo-nombre').value,
@@ -14,7 +13,6 @@ document.getElementById('form_especialista').addEventListener('submit', function
         'genero': document.getElementById('genero').value,
         'telefono1': document.getElementById('telefono1').value,
         'telefono2': document.getElementById('telefono2').value,
-        'email': document.getElementById('email').value
     };
 
     console.log('Datos ingresados:');
@@ -43,7 +41,6 @@ document.getElementById('form_especialista').addEventListener('submit', function
             document.getElementById('genero').value = '';
             document.getElementById('telefono1').value = '';
             document.getElementById('telefono2').value = '';
-            document.getElementById('email').value = '';
             alert('El usuario se insertó correctamente');
         } else {
             console.log(data);
