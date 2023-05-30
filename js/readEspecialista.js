@@ -44,8 +44,11 @@ function getData(url) {
     telefono2.value = data.telefono2;
 }
   
-getData('../php/readEspecialista.php')
-    .then(data => {
-      displayData(data);
+document.getElementById('ver').addEventListener('click', function() {
+  getData('../php/readEspecialista.php')
+      .then(data => {
+          displayData(data);
+      });
 });
+
   

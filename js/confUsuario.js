@@ -1,4 +1,4 @@
-document.getElementById('form_especialista').addEventListener('submit', function(e) {
+document.getElementById('guardar').addEventListener('click', function(e) {
     e.preventDefault();
 
     let formulario = {
