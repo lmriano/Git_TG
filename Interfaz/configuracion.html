@@ -112,7 +112,7 @@
                 <small>Configuración/</small>
             </div>
             <div class="page-content">
-                <div class="table-register">
+                <div id="table-register">
                     <p>Registro de datos personales especialista</p>
                     <br><br>
 
@@ -129,7 +129,7 @@
                         </div>
                     </form>
                     
-                    <form class="formulario">
+                    <form id="form_especialista" method="POST">
                         
                         <div class="columna1">
                             <div class="grupo-campo">
@@ -168,9 +168,9 @@
                                 <div class="fila2">
                                     <label for="tipo-documento">Tipo de documento*</label>
                                     <select id="tipo-documento" name="tipo-documento" required>
-                                        <option value="CC">Cédula de Ciudadanía</option>
-                                        <option value="CE">Cédula de Extranjería</option>
-                                        <option value="TI">Tarjeta de Identidad</option>
+                                        <option value="">Selecciona el tipo</option>
+                                        <option value="1">Cédula de Ciudadanía</option>
+                                        <option value="2">Cédula de Extranjería</option>
                                     </select>
                                 </div>
                             </div>
@@ -205,9 +205,9 @@
                                 <label for="genero">Género*</label>
                                 <select id="genero" name="genero" required>
                                   <option value="">Selecciona tu género</option>
-                                  <option value="masculino">Masculino</option>
-                                  <option value="femenino">Femenino</option>
-                                  <option value="otro">Otro</option>
+                                  <option value="1">Femenino</option>
+                                  <option value="2">Masculino</option>
+                                  <option value="3">Otro</option>
                                 </select>
                               </div>
                             </div>
@@ -233,28 +233,29 @@
                             <div class="grupo-campo">
                                 <div class="fila3">
                                     <label for="email">Correo electrónico*</label>
-                                    <input type="email" id="email" name="email" required>
+                                    <input type="email" id="email" name="email">
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="eliminar">
+                            <a href="#"><p>Cambiar contraseña</p></a>
+                        </div>
+    
+                        <div class="eliminar">
+                            <a href="#"><p>Eliminar cuenta</p></a>
+                        </div>
+    
+                        <div class="botones-reg">
+                            <button type="submit">Guardar</button>
+                        </div>
                     </form>
 
-                    <div class="eliminar">
-                        <a href="#"><p>Eliminar cuenta</p></a>
-                    </div>
-
-                    <div class="botones-reg">
-                        <button>Guardar</button>
-                    </div>
                 </div>
             </div>
         </main> 
     </div>
-
-    <script>
-        function borrarSeleccion() {
-          document.getElementById("foto").value = "";
-        }
-    </script>
+    <script src="../js/confUsuario.js"></script>
+    
 </body>
 </html>

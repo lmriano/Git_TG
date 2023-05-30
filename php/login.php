@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 include 'conexion.php';
 
 $email = $_POST['txt_email'];
@@ -14,6 +16,7 @@ try {
         $hashContraseña = $registro['contraseña'];
 
         if (password_verify($contraseña, $hashContraseña)) {
+            $_SESSION['correo'] = $email;
             echo json_encode('true');
         } else {
             echo json_encode('false');
