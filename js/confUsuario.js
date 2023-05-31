@@ -19,7 +19,7 @@ document.getElementById('guardar').addEventListener('click', function(e) {
     console.log(formulario);
 
     // Enviar los datos al servidor en formato JSON
-    fetch('../php/confUsuario.php', {
+    fetch('../php/modificarEspecialista.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
