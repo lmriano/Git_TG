@@ -10,7 +10,12 @@ try {
     $pdo->execute();
 
     $result = $pdo->fetch(PDO::FETCH_ASSOC);
-    echo json_encode($result);
+
+    if ($result) {
+        echo json_encode($result);
+    } else {
+        echo json_encode(array()); // Devolver un arreglo vacío si no hay registros encontrados
+    }
 } catch(PDOException $error) {
     echo $error->getMessage();
     die();

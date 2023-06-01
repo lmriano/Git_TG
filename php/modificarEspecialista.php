@@ -13,32 +13,27 @@ $n_documento = isset($data['numero-documento']) ? $data['numero-documento'] : ''
 $c_expedicion = isset($data['ciudad-expedicion']) ? $data['ciudad-expedicion'] : '';
 $f_nacimiento = isset($data['fecha-nacimiento']) ? $data['fecha-nacimiento'] : '';
 $genero = isset($data['genero']) ? $data['genero'] : '';
-$telefono1 = isset($data['telefono1']) ? $data['telefono1'] : '';
-$telefono2 = isset($data['telefono2']) ? $data['telefono2'] : '';
-
+$telefono = isset($data['telefono']) ? $data['telefono'] : '';
 $email = isset($_SESSION['correo']) ? $_SESSION['correo'] : '';
-$id_tipo=2;
 
 try {
-    $pdo = $conexion->prepare('UPDATE usuarios SET num_documento=?, correo=?, primer_nombre=?, segundo_nombre=?, primer_apellido=?, 
-    segundo_apellido=?, id_documento=?, ciudad_expedicion=?, fecha_nacimiento=?, telefono1=?, 
-    telefono2=?, id_genero=?, id_tipo=? WHERE correo=?');
-    
-    $pdo->bindValue(1, $n_documento);
-    $pdo->bindValue(2, $email);
-    $pdo->bindValue(3, $p_nombre);
-    $pdo->bindValue(4, $s_nombre);
-    $pdo->bindValue(5, $p_apellido);
-    $pdo->bindValue(6, $s_apellido);
-    $pdo->bindValue(7, $t_documento);
-    $pdo->bindValue(8, $c_expedicion);
-    $pdo->bindValue(9, $f_nacimiento);
-    $pdo->bindValue(10, $telefono1);
-    $pdo->bindValue(11, $telefono2);
-    $pdo->bindValue(12, $genero);
-    $pdo->bindValue(13, $id_tipo); 
+    $pdo = $conexion->prepare('UPDATE usuarios SET primer_nombre=?, segundo_nombre=?, primer_apellido=?, 
+    segundo_apellido=?, id_documento=?, ciudad_expedicion=?, fecha_nacimiento=?, telefono=?, 
+    id_genero=?, id_tipo=? WHERE correo=?');
 
-    $pdo->execute();
+    $pdo->bindValue(1, $p_nombre);
+    $pdo->bindValue(2, $s_nombre);
+    $pdo->bindValue(3, $p_apellido);
+    $pdo->bindValue(4, $s_apellido);
+    $pdo->bindValue(5, $t_documento);
+    $pdo->bindValue(6, $c_expedicion);
+    $pdo->bindValue(7, $f_nacimiento);
+    $pdo->bindValue(8, $telefono);
+    $pdo->bindValue(9, $genero);
+    $pdo->bindValue(10, 2); 
+    $pdo->bindValue(11, $email);
+
+    $pdo->execute() or die(print($pdo->errorInfo()));
     echo json_encode('true');
 } catch(PDOException $error) {
     echo $error->getMessage();

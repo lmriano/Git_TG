@@ -1,4 +1,3 @@
-
 function getData(url) {
   return fetch(url)
     .then(response => {
@@ -12,43 +11,44 @@ function getData(url) {
     });
 }
 
-  function displayData(data) {
-    console.log('Datos leídos:');
-    console.log(data);
-    
-    const pnombreEspecialista = document.getElementById('primer-nombre');
-    pnombreEspecialista.value = data.primer_nombre;
+function displayData(data) {
+  console.log('Datos leídos:');
+  console.log(data);
 
-    const snombreEspecialista = document.getElementById('segundo-nombre');
-    snombreEspecialista.value = data.segundo_nombre;
+  if (Object.keys(data).length === 0) {
+    console.log('No hay datos disponibles');
+    alert('No hay datos disponibles');
+    return;
+  }
 
-    const papellidoEspecialista = document.getElementById('primer-apellido');
-    papellidoEspecialista.value = data.primer_apellido;
+  const pnombreEspecialista = document.getElementById('primer-nombre');
+  pnombreEspecialista.value = data.primer_nombre || '';
 
-    const sapellidoEspecialista = document.getElementById('segundo-apellido');
-    sapellidoEspecialista.value = data.segundo_apellido;
+  const snombreEspecialista = document.getElementById('segundo-nombre');
+  snombreEspecialista.value = data.segundo_nombre || '';
 
-    const nDocumento = document.getElementById('numero-documento');
-    nDocumento.value = data.num_documento;
+  const papellidoEspecialista = document.getElementById('primer-apellido');
+  papellidoEspecialista.value = data.primer_apellido || '';
 
-    const cExpedicion = document.getElementById('ciudad-expedicion');
-    cExpedicion.value = data.ciudad_expedicion;
+  const sapellidoEspecialista = document.getElementById('segundo-apellido');
+  sapellidoEspecialista.value = data.segundo_apellido || '';
 
-    const fNacimiento = document.getElementById('fecha-nacimiento');
-    fNacimiento.value = data.fecha_nacimiento;
+  const nDocumento = document.getElementById('numero-documento');
+  nDocumento.value = data.num_documento || '';
 
-    const telefono1 = document.getElementById('telefono1');
-    telefono1.value = data.telefono1;
-    
-    const telefono2 = document.getElementById('telefono2');
-    telefono2.value = data.telefono2;
+  const cExpedicion = document.getElementById('ciudad-expedicion');
+  cExpedicion.value = data.ciudad_expedicion || '';
+
+  const fNacimiento = document.getElementById('fecha-nacimiento');
+  fNacimiento.value = data.fecha_nacimiento || '';
+
+  const telefono = document.getElementById('telefono');
+  telefono.value = data.telefono || '';
 }
-  
+
 document.getElementById('ver').addEventListener('click', function() {
   getData('../php/readEspecialista.php')
-      .then(data => {
-          displayData(data);
-      });
+    .then(data => {
+      displayData(data);
+    });
 });
-
-  
