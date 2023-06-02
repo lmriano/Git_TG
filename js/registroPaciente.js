@@ -12,19 +12,22 @@ document.getElementById('guardar').addEventListener('click', function(e) {
         'fecha-nacimiento': document.getElementById('fecha-nacimiento').value,
         'genero': document.getElementById('genero').value,
         'telefono': document.getElementById('telefono').value,
+        'email' : document.getElementById('email').value,
+        'actividad' : document.getElementById('actividad').value,
+        'frecuencia' : document.getElementById('frecuencia').value,
     };
 
     console.log('Datos ingresados:');
     console.log(formulario);
 
 
-    if (!formulario['primer-nombre'] || !formulario['primer-apellido'] || !formulario['segundo-apellido']|| !formulario['tipo-documento'] || !formulario['numero-documento'] 
-    || !formulario['ciudad-expedicion'] || !formulario['fecha-nacimiento'] || !formulario['genero'] || !formulario['telefono']) {
-        alert('Por favor, complete los campos obligatorios.');
+    let email = formulario['email'];
+    if (!isValidEmail(email)) {
+        alert('Por favor, ingrese un correo electrónico válido.');
         return;
     }
 
-    fetch('../php/confUsuario.php', {
+    fetch('../php/registroPaciente.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -34,6 +37,7 @@ document.getElementById('guardar').addEventListener('click', function(e) {
     .then(res => res.json())
     .then(data => {
         if (data === 'true') {
+
             document.getElementById('primer-nombre').value = '';
             document.getElementById('segundo-nombre').value = '';
             document.getElementById('primer-apellido').value = '';
@@ -44,9 +48,21 @@ document.getElementById('guardar').addEventListener('click', function(e) {
             document.getElementById('fecha-nacimiento').value = '';
             document.getElementById('genero').value = '';
             document.getElementById('telefono').value = '';
-            alert('El usuario se insertó correctamente');
+            document.getElementById('email').value = '';
+            document.getElementById('actividad').value = '';
+            document.getElementById('frecuencia').value = '';
+            alert('El paciente se insertó correctamente');
         } else {
             console.log(data);
         }
     });
 });
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Por favor, ingresa un correo electrónico válido');
+    }else{
+        return emailRegex.test(email);
+    }
+}

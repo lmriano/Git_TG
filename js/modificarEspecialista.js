@@ -17,7 +17,6 @@ document.getElementById('modificar').addEventListener('click', function(e) {
     console.log('Datos ingresados:');
     console.log(formulario);
 
-    // Enviar los datos al servidor en formato JSON
     fetch('../php/modificarEspecialista.php', {
         method: 'POST',
         headers: {
@@ -27,7 +26,10 @@ document.getElementById('modificar').addEventListener('click', function(e) {
     })
     .then(res => res.json())
     .then(data => {
-        if (data === 'true') {
+        if (data === 'No hay datos') {
+            console.log('No se encontró el registro para modificar');
+            alert('No se encontró el registro para modificar');
+        } else if (data === 'true') {
             // Restablecer los valores del formulario
             document.getElementById('primer-nombre').value = '';
             document.getElementById('segundo-nombre').value = '';
@@ -39,7 +41,7 @@ document.getElementById('modificar').addEventListener('click', function(e) {
             document.getElementById('fecha-nacimiento').value = '';
             document.getElementById('genero').value = '';
             document.getElementById('telefono').value = '';
-            alert('El usuario se insertó correctamente');
+            alert('El usuario se modificó');
         } else {
             console.log(data);
         }

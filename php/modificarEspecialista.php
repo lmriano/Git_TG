@@ -17,6 +17,19 @@ $telefono = isset($data['telefono']) ? $data['telefono'] : '';
 $email = isset($_SESSION['correo']) ? $_SESSION['correo'] : '';
 
 try {
+    // Verificar si existen registros con el correo proporcionado
+    $checkQuery = $conexion->prepare('SELECT * FROM usuarios WHERE correo = ?');
+    $checkQuery->bindValue(1, $email);
+    $checkQuery->execute();
+    $existingUser = $checkQuery->fetch(PDO::FETCH_ASSOC);
+
+    if (!$existingUser) {
+        // No se encontró el registro, devuelve un mensaje de error o respuesta indicando que no se puede encontrar el registro para modificar
+        echo json_encode('No hay datos');
+        die();
+    }
+
+    // Realizar la actualización
     $pdo = $conexion->prepare('UPDATE usuarios SET primer_nombre=?, segundo_nombre=?, primer_apellido=?, 
     segundo_apellido=?, id_documento=?, ciudad_expedicion=?, fecha_nacimiento=?, telefono=?, 
     id_genero=?, id_tipo=? WHERE correo=?');
@@ -34,7 +47,14 @@ try {
     $pdo->bindValue(11, $email);
 
     $pdo->execute() or die(print($pdo->errorInfo()));
-    echo json_encode('true');
+    $rowsAffected = $pdo->rowCount();
+
+    if ($rowsAffected > 0) {
+        echo json_encode('true');
+    } else {
+        echo json_encode('false');
+    }
+
 } catch(PDOException $error) {
     echo $error->getMessage();
     die();

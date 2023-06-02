@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="../../media/logo-p.png">
+    <link rel="icon" href="../media/logo-p.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Registrar paciente</title>
 </head>
@@ -13,14 +13,14 @@
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="side-header">
-            <a href="../../index.html">
-                <img src="../../media/logo-dash.svg" alt="Logo-dash-2" style="height: 45px;">
+            <a href="../index.html">
+                <img src="../media/logo-dash.svg" alt="Logo-dash-2" style="height: 45px;">
             </a>  
         </div>
         
         <div class="side-content">
             <div class="profile">
-                <div class="profile-img bg-img" style="background-image: url(../../media/1.png)"></div>
+                <div class="profile-img bg-img" style="background-image: url(../media/1.png)"></div>
                 <h4>Nombre</h4>
                 <small>Especialista</small>
             </div>
@@ -95,8 +95,8 @@
                 <div class="header-menu">
                                       
                     <div class="user">
-                        <div class="bg-img" style="background-image: url(../../media/1.png)"></div>
-                        <a href="../../index.html">
+                        <div class="bg-img" style="background-image: url(../media/1.png)"></div>
+                        <a href="../index.html">
                             <i class="fa-solid fa-arrow-right-from-bracket" style="color: #0a0a0a;"></i>
                             <span>Salir</span>
                         </a>
@@ -112,7 +112,7 @@
             </div>
             <div class="page-content">
                 <div class="table-register">
-                    <p>Registro de Datos Personales</p>
+                    <p>Registro del paciente</p>
                     <br><br>
                     
                     <form class="formulario">
@@ -155,9 +155,10 @@
                                 <div class="fila2">
                                     <label for="tipo-documento">Tipo de documento*</label>
                                     <select id="tipo-documento" name="tipo-documento" required>
-                                        <option value="CC">Cédula de Ciudadanía</option>
-                                        <option value="CE">Cédula de Extranjería</option>
-                                        <option value="TI">Tarjeta de Identidad</option>
+                                        <option value="">Selecciona el tipo</option>
+                                        <option value="1">Cédula de Ciudadanía</option>
+                                        <option value="2">Cédula de Extranjería</option>
+                                        <option value="3">Tarjeta de Identidad</option>
                                     </select>
                                 </div>
                             </div>
@@ -192,9 +193,9 @@
                                 <label for="genero">Género*</label>
                                 <select id="genero" name="genero" required>
                                   <option value="">Selecciona tu género</option>
-                                  <option value="masculino">Masculino</option>
-                                  <option value="femenino">Femenino</option>
-                                  <option value="otro">Otro</option>
+                                  <option value="1">Femenino</option>
+                                  <option value="2">Masculino</option>
+                                  <option value="3">Otro</option>
                                 </select>
                               </div>
                             </div>
@@ -203,42 +204,17 @@
                         <div class="columna2">
                             <div class="grupo-campo">
                                 <div class="fila3">
-                                    <label for="telefono1">Teléfono 1*</label>
-                                    <input type="tel" id="telefono1" name="telefono1" required>
+                                    <label for="telefono">Teléfono*</label>
+                                    <input type="tel" id="telefono" name="telefono" required>
                                 </div>
                             </div>
                         </div>
-                        <div class="columna3">
-                            <div class="grupo-campo">
-                                <div class="fila3">
-                                    <label for="telefono2">Teléfono 2</label>
-                                    <input type="tel" id="telefono2" name="telefono2">
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="columna4">
                             <div class="grupo-campo">
                                 <div class="fila3">
                                     <label for="email">Correo electrónico*</label>
                                     <input type="email" id="email" name="email" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="columna1">
-                            <div class="grupo-campo">
-                                <div class="fila4">
-                                    <label for="peso">Peso*</label>
-                                    <input type="text" id="peso" name="peso" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="columna2">
-                            <div class="grupo-campo">
-                                <div class="fila4">
-                                    <label for="Estatura">Estatura*</label>
-                                    <input type="text" id="estatura" name="estatura" required>
                                 </div>
                             </div>
                         </div>
@@ -256,20 +232,18 @@
                             <div class="grupo-campo">
                                 <div class="fila4">
                                     <label for="frecuencia-fisica">Frecuencia de actividad física</label>
-                                    <input type="text" id="frecuencia" name="frecuencia">
+                                    <input type="text" id="frecuencia" name="frecuencia" >
                                 </div>
                             </div>
                         </div>
+                        <div class="botones-reg">
+                            <button type="submit" id="guardar">Guardar</button>
+                        </div>
                     </form>        
-
-                    <div class="botones-reg">
-                        <a href="registro_p.html"><button class="bt-reg-1">Limpiar</button></a>
-                        <button>Guardar</button>
-                    </div>
-                      
                 </div>
             </div>
         </main> 
     </div>
+    <script src="../js/registroPaciente.js"></script>
 </body>
 </html>

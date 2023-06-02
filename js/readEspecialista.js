@@ -36,6 +36,9 @@ function displayData(data) {
   const nDocumento = document.getElementById('numero-documento');
   nDocumento.value = data.num_documento || '';
 
+  const tipoDocumento = document.getElementById('tipo-documento');
+  tipoDocumento.value = data.id_documento.toString();
+
   const cExpedicion = document.getElementById('ciudad-expedicion');
   cExpedicion.value = data.ciudad_expedicion || '';
 
@@ -44,6 +47,9 @@ function displayData(data) {
 
   const telefono = document.getElementById('telefono');
   telefono.value = data.telefono || '';
+
+  const genero = document.getElementById('genero');
+  genero.value = data.id_genero.toString();
 }
 
 document.getElementById('ver').addEventListener('click', function() {
