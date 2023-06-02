@@ -18,7 +18,9 @@ $email = isset($data['email']) ? $data['email'] : '';
 $actividad = isset($data['actividad']) ? $data['actividad'] : '';
 $frecuencia = isset($data['frecuencia']) ? $data['frecuencia'] : '';
 $fechaActual = date('Y-m-d');
-$_SESSION['numero-documento'] = $n_documento;
+
+$nd_especialista = $_SESSION['numero-documento']; 
+
 
 try {
     $pdo = $conexion->prepare('INSERT INTO usuarios(num_documento, correo, primer_nombre, segundo_nombre,
@@ -46,7 +48,7 @@ try {
 
     $pdo->bindValue(1, $fechaActual);
     $pdo->bindValue(2, $n_documento); 
-    $pdo->bindValue(3, $d_especialista);
+    $pdo->bindValue(3, $nd_especialista);
     $pdo->bindValue(4, $actividad);
     $pdo->bindValue(5, $frecuencia);
 
@@ -58,3 +60,4 @@ try {
     die();
 }
 ?>
+
