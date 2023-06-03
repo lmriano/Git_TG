@@ -1,8 +1,10 @@
 <?php
-
+session_start();
 require_once 'conexion.php';
 
 $documento = isset($_POST['documento']) ? $_POST['documento'] : '';
+$_SESSION['documento'] = $documento;
+$nd_paciente=$_SESSION['documento'];
 
 if ($conexion) {
     $pdo = $conexion->prepare('SELECT COUNT(*) AS count FROM usuarios WHERE num_documento = :documento AND id_tipo = 3');
@@ -20,6 +22,4 @@ if ($conexion) {
     echo json_encode(array('error' => 'Error en la conexión a la base de datos'));
     die();
 }
-
-
 ?>
