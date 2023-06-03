@@ -123,11 +123,12 @@
                         <p>Busqueda de paciente</p>
 
                         <div class="consulta-u">
-                            <input type="text" id="consulta" name="consulta" placeholder="Documento" required>
-                            <a href="consulta_datos_p.html">
-                                <button><i class="fa-solid fa-magnifying-glass" ></i></button>
-                            </a>
+                            <form id="consultaP" method="POST">
+                              <input type="text" id="documento" name="documento" placeholder="Documento" required>
+                              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
                         </div>
+                          
                     </div>
 
                 </div>
@@ -136,5 +137,6 @@
         </main>
         
     </div>
+    <script src="../../js/consulta.js"></script>
 </body>
 </html>

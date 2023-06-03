@@ -160,9 +160,10 @@
                                 <div class="fila2">
                                     <label for="tipo-documento">Tipo de documento*</label>
                                     <select id="tipo-documento" name="tipo-documento" required>
-                                        <option value="CC">Cédula de Ciudadanía</option>
-                                        <option value="CE">Cédula de Extranjería</option>
-                                        <option value="TI">Tarjeta de Identidad</option>
+                                        <option value="">Selecciona el tipo</option>
+                                        <option value="1">Cédula de Ciudadanía</option>
+                                        <option value="2">Cédula de Extranjería</option>
+                                        <option value="3">Tarjeta de Identidad</option>
                                     </select>
                                 </div>
                             </div>
@@ -197,9 +198,9 @@
                                 <label for="genero">Género*</label>
                                 <select id="genero" name="genero" required>
                                   <option value="">Selecciona tu género</option>
-                                  <option value="masculino">Masculino</option>
-                                  <option value="femenino">Femenino</option>
-                                  <option value="otro">Otro</option>
+                                  <option value="1">Femenino</option>
+                                  <option value="2">Masculino</option>
+                                  <option value="3">Otro</option>
                                 </select>
                               </div>
                             </div>
@@ -222,30 +223,12 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="columna1">
-                            <div class="grupo-campo">
-                                <div class="fila4">
-                                    <label for="peso">Peso*</label>
-                                    <input type="text" id="peso" name="peso" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="columna2">
-                            <div class="grupo-campo">
-                                <div class="fila4">
-                                    <label for="Estatura">Estatura*</label>
-                                    <input type="text" id="estatura" name="estatura" required>
-                                </div>
-                            </div>
-                        </div>
                         
                         <div class="columna3">
                             <div class="grupo-campo">
                                 <div class="fila4">
                                     <label for="actividad-fisica">Actividad física que realiza</label>
-                                    <input type="text" id="actividad" name="actividad">
+                                    <input type="text" id="actividad" name="actividad" placeholder="Deporte">
                                 </div>
                             </div>
                         </div>
@@ -254,14 +237,14 @@
                             <div class="grupo-campo">
                                 <div class="fila4">
                                     <label for="frecuencia-fisica">Frecuencia de actividad física</label>
-                                    <input type="text" id="frecuencia" name="frecuencia">
+                                    <input type="text" id="frecuencia" name="frecuencia" placeholder="Días a la semana">
                                 </div>
                             </div>
                         </div>
                         <div class="botones-reg">
-                            <button type="submit" id="modificar">Editar</button>
+                            <button type="submit" id="editar">Editar</button>
                         </div>
-                    </form>   
+                    </form>       
 
                     <div class="botones-reg">
                         <a href="consulta_p.html"><button class="bt-reg-1">Regresar</button></a>
@@ -270,5 +253,6 @@
             </div>
         </main> 
     </div>
+    <script src="../../js/modificarPaciente.js"></script>
 </body>
 </html>
