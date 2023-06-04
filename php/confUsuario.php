@@ -14,8 +14,6 @@ $n_documento = isset($data['numero-documento']) ? $data['numero-documento'] : ''
 $_SESSION['numero-documento'] = $n_documento;
 $nd_especialista = $_SESSION['numero-documento'];
 
-echo $_SESSION['numero-documento'];
-
 $c_expedicion = isset($data['ciudad-expedicion']) ? $data['ciudad-expedicion'] : '';
 $f_nacimiento = isset($data['fecha-nacimiento']) ? $data['fecha-nacimiento'] : '';
 $genero = isset($data['genero']) ? $data['genero'] : '';
