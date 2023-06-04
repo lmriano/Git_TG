@@ -107,12 +107,12 @@
         <main>
             <div class="page-header">
                 <h1>ECG</h1>
-                <small>ECG/Datos/Ayuda/Captura1/Captura2/Confirmar</small>
+                <small>ECG/Datos/Ayuda/Captura1/Confirmar</small>
             </div>
             <div class="page-content">
                 <div class="table-register">
                     <div class="regresar">
-                        <a href="captura2.html"><i class="fa-solid fa-arrow-left" style="color: #0a0a0a"></i></a>
+                        <a href="captura1.html"><i class="fa-solid fa-arrow-left" style="color: #0a0a0a"></i></a>
                         <p>Datos Personales</p>
                     </div>
                     <br><br>
@@ -145,19 +145,12 @@
                                 </div>
                             </div>
 
-                            <div class="columna4">
-                                <div class="grupo-campo">
-                                    <div class="fila2">
-                                        <label for="fecha-proceso">Fecha de consulta</label>
-                                        <input type="date" id="fecha-proceso" name="fecha-proceso" required>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="columna1">
                                 <div class="grupo-campo">
                                     <div class="fila3">
-                                        <label for="telefono1">Teléfono 1</label>
-                                        <input type="tel" id="telefono1" name="telefono1" required>
+                                        <label for="telefono1">Teléfono</label>
+                                        <input type="tel" id="telefono" name="telefono" required>
                                     </div>
                                 </div>
                             </div>
@@ -179,10 +172,18 @@
                                     </div>
                                 </div>
                             </div>
-                                
+
+                            <div class="columna4">
+                                <div class="grupo-campo">
+                                    <div class="fila4">
+                                        <label for="frecuencia-fisica">Frecuencia de actividad física</label>
+                                        <input type="text" id="frecuencia" name="frecuencia" required>
+                                    </div>
+                                </div>
+                            </div>                                
                         </form>
 
-                    <div class="t-captura">
+                    <!--<div class="t-captura">
                         <div class="img-doc">
                             <img src="../../media/captura.svg" alt="captura-ecg">
                         </div>
@@ -198,7 +199,7 @@
                                 <small>Movimiento</small>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     
                     <div class="botones-reg">
                         <a href="documento.html"><button class="bt-reg-2">Documento</button></a>
@@ -208,5 +209,6 @@
             </div>
         </main> 
     </div>
+    <script src="../../js/readPacienteECG.js"></script>
 </body>
 </html>
