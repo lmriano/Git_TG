@@ -4,6 +4,8 @@ session_start();
 
 $data = json_decode(file_get_contents("php://input"), true);
 
+$nd_especialista = isset($_SESSION['numero-documento']) ? $_SESSION['numero-documento'] : '';
+
 $p_nombre = isset($data['primer-nombre']) ? $data['primer-nombre'] : '';
 $s_nombre = isset($data['segundo-nombre']) ? $data['segundo-nombre'] : '';
 $p_apellido = isset($data['primer-apellido']) ? $data['primer-apellido'] : '';
@@ -18,8 +20,6 @@ $email = isset($data['email']) ? $data['email'] : '';
 $actividad = isset($data['actividad']) ? $data['actividad'] : '';
 $frecuencia = isset($data['frecuencia']) ? $data['frecuencia'] : '';
 $fechaActual = date('Y-m-d');
-
-$nd_especialista = $_SESSION['numero-documento']; 
 
 
 try {

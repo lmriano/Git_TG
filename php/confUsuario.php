@@ -9,9 +9,13 @@ $s_nombre = isset($data['segundo-nombre']) ? $data['segundo-nombre'] : '';
 $p_apellido = isset($data['primer-apellido']) ? $data['primer-apellido'] : '';
 $s_apellido = isset($data['segundo-apellido']) ? $data['segundo-apellido'] : '';
 $t_documento = isset($data['tipo-documento']) ? $data['tipo-documento'] : '';
+
 $n_documento = isset($data['numero-documento']) ? $data['numero-documento'] : '';
 $_SESSION['numero-documento'] = $n_documento;
 $nd_especialista = $_SESSION['numero-documento'];
+
+echo $_SESSION['numero-documento'];
+
 $c_expedicion = isset($data['ciudad-expedicion']) ? $data['ciudad-expedicion'] : '';
 $f_nacimiento = isset($data['fecha-nacimiento']) ? $data['fecha-nacimiento'] : '';
 $genero = isset($data['genero']) ? $data['genero'] : '';
@@ -39,6 +43,5 @@ try {
     echo json_encode('true');
 } catch(PDOException $error) {
     echo $error->getMessage();
-    die();
 }
 ?>

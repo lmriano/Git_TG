@@ -1,7 +1,8 @@
 <?php
 
-session_start();
+
 include 'conexion.php';
+session_start();
 
 $email = $_POST['txt_email'];
 $contraseña = $_POST['txt_pass'];

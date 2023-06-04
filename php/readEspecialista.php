@@ -1,8 +1,10 @@
 <?php
-session_start();
+
 require_once 'conexion.php';
+session_start();
 
 $email = isset($_SESSION['correo']) ? $_SESSION['correo'] : '';
+
 
 try {
     $pdo = $conexion->prepare('SELECT * FROM usuarios WHERE correo = ?');
