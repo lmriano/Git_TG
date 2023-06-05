@@ -17,7 +17,6 @@ $telefono = isset($data['telefono']) ? $data['telefono'] : '';
 $email = isset($data['email']) ? $data['email'] : '';
 $actividad = isset($data['actividad']) ? $data['actividad'] : '';
 $frecuencia = isset($data['frecuencia']) ? $data['frecuencia'] : '';
-$fechaActual = date('Y-m-d');
 
 $nd_especialista = $_SESSION['numero-documento']; 
 
@@ -36,22 +35,22 @@ try {
     $pdo->bindValue(11, $genero);
     $pdo->bindValue(12, $n_documento); 
 
-    $pdo->execute() or die(print_r($pdo->errorInfo()));
+    $pdo->execute();
+
     if ($pdo->rowCount() === 0) {
-        echo json_encode('false'); 
+        echo json_encode('false');
         exit();
     }
 
-    $pdoConsulta = $conexion->prepare('UPDATE consulta SET fecha_consulta=?, documento_paciente=?, documento_especialista=?, actividad_fisica=?, frecuencia_actividad=? WHERE documento_paciente=?');
+    $pdoConsulta = $conexion->prepare('UPDATE consulta SET documento_especialista=?, actividad_fisica=?, frecuencia_actividad=? WHERE documento_paciente=?');
 
-    $pdoConsulta->bindValue(1, $fechaActual);
-    $pdoConsulta->bindValue(2, $n_documento); 
-    $pdoConsulta->bindValue(3, $nd_especialista);
-    $pdoConsulta->bindValue(4, $actividad);
-    $pdoConsulta->bindValue(5, $frecuencia);
-    $pdoConsulta->bindValue(6, $n_documento);
-
-    $pdoConsulta->execute() or die(print_r($pdoConsulta->errorInfo()));
+    $pdoConsulta->bindValue(1, $nd_especialista);
+    $pdoConsulta->bindValue(2, $actividad);
+    $pdoConsulta->bindValue(3, $frecuencia);
+    $pdoConsulta->bindValue(4, $n_documento);
+    
+    $pdoConsulta->execute();
+    
     echo json_encode('true');
 
 } catch(PDOException $error) {

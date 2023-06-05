@@ -21,7 +21,7 @@ document.getElementById('editar').addEventListener('click', function(e) {
     console.log('Datos ingresados:');
     console.log(formulario);
 
-    fetch('../php/modificarPaciente.php', {
+    fetch('../../php/modificarPaciente.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -45,6 +45,7 @@ document.getElementById('editar').addEventListener('click', function(e) {
             document.getElementById('actividad').value = '';
             document.getElementById('frecuencia').value = '';
             alert('El usuario se modificó');
+            window.location.href = 'consulta_datos_p.html';
         } else {
             console.log(data);
         }
