@@ -52,7 +52,7 @@ function displayData(data) {
   genero.value = data.id_genero.toString();
 }
 
-document.getElementById('ver').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function() {
   getData('../php/readEspecialista.php')
     .then(data => {
       displayData(data);

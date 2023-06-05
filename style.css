@@ -984,6 +984,12 @@ tbody tr td{
      margin:1px;
 }
 
+.parrafo {
+    text-align: justify;
+    color: #888888;
+    font-size: 14px;
+  }
+  
 
 @media (min-width: 830px){
 

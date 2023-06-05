@@ -42,6 +42,7 @@ document.getElementById('modificar').addEventListener('click', function(e) {
             document.getElementById('genero').value = '';
             document.getElementById('telefono').value = '';
             alert('El usuario se modificó');
+            window.location.href = 'configuracion.html';
         } else {
             console.log(data);
         }
