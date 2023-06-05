@@ -1003,6 +1003,10 @@ tbody tr td{
     object-fit: contain;
 }
 
+input[type="text"], input[type="email"], input[type="password"] {
+    text-transform: uppercase;
+}
+
 @media (min-width: 830px){
 
     header .logo{
