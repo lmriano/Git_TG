@@ -1003,7 +1003,7 @@ tbody tr td{
     object-fit: contain;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"], input[type="password"] {
     text-transform: uppercase;
 }
 
